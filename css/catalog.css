@@ -1,0 +1,398 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+
+.holder {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Arial, Tahoma
+}
+
+
+/* Small Screen */
+
+@media(min-width:768px) {
+    .holder {
+        width: 750px;
+    }
+}
+
+
+/* Medium Screen */
+
+@media(min-width:992px) {
+    .holder {
+        width: 970px;
+    }
+}
+
+
+/* Large Screen */
+
+@media(min-width:1200px) {
+    .holder {
+        width: 1170px;
+    }
+}
+
+
+/*Start Navbar*/
+
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar .holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar p {
+    color: #71b6de;
+    font-size: 22px;
+}
+
+@media(min-width:768px) {
+    .navbar .toogle-menu {
+        display: none;
+    }
+}
+
+.navbar ul {
+    list-style: none
+}
+
+@media (max-width:767px) {
+    .navbar ul {
+        display: none;
+    }
+    .navbar .toogle-menu:hover+ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 8%;
+        left: 0;
+        width: 100%;
+        background-color: #009899;
+        text-align: center;
+        z-index: 333;
+    }
+    .navbar .toogle-menu:hover+ul li a {
+        color: #fff;
+        display: block;
+        width: fit-content;
+        margin: 10px auto 10px
+    }
+    .navbar .toogle-menu:hover+ul li {
+        padding: 0;
+    }
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding-left: 40px
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #777;
+    padding-bottom: 5px;
+    transition: 0.4s
+}
+
+.navbar ul li a:hover,
+.navbar ul .active {
+    border-bottom: 2px solid #fd6f6f
+}
+
+
+/*End navbar*/
+
+
+/*Start Poster*/
+
+.poster {
+    height: 250px;
+    background-image: url('../photo/waterfall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster .search {
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+}
+
+.poster .search input {
+    padding: 12px;
+    width: 100%;
+    color: #009899;
+    border: none;
+    outline: none;
+}
+
+.poster .search i {
+    color: #FFF;
+    padding: 12px 30px;
+    background-color: #009899;
+}
+
+.poster input::placeholder {
+    color: #009899;
+    text-transform: capitalize;
+    opacity: 0.6
+}
+
+.poster input:focus {
+    outline: none
+}
+
+
+/*End Poster*/
+
+
+/*Start port-nav*/
+
+.port-nav {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.port-nav .holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.port-nav h5 {
+    color: #0a979c;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.port-nav p {
+    font-size: 14px;
+    color: #0a979c;
+}
+
+.port-nav p span {
+    padding: 2px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer
+}
+
+
+/*End port-nav*/
+
+
+/*Start Portfolio*/
+
+.portfolio {
+    text-align: center;
+}
+
+.portfolio .port-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px 20px;
+}
+
+.portfolio .main-port .port-image {
+    width: 100%;
+    cursor: pointer
+}
+
+.portfolio .main-port .port-image img {
+    width: 100%;
+    height: 150px
+}
+
+.portfolio .main-port .port-info {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*End Portfolio*/
+
+
+/*Start Counter*/
+
+.counter {
+    padding: 100px 0
+}
+
+.counter .holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width:767px) {
+    .counter .holder {
+        flex-direction: column;
+    }
+    .counter .holder>ul {
+        margin: 50px 0;
+    }
+}
+
+.counter .count-btn button {
+    background-color: #009899;
+    color: #FFF;
+    padding: 10px 35px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.counter .count-btn:first-of-type {
+    opacity: 0.6
+}
+
+.counter ul {
+    list-style: none;
+    padding-top: 10px
+}
+
+.counter ul li {
+    display: inline-block;
+    margin-right: 50px
+}
+
+@media(max-width:767px) {
+    .counter ul li {
+        margin-right: 20px;
+    }
+}
+
+.counter ul li a {
+    text-decoration: none;
+    color: #777;
+    padding: 10px 15px;
+}
+
+.counter ul li a:hover,
+.counter ul li .active {
+    background-color: #009899;
+    color: #FFF;
+    border-radius: 3px
+}
+
+@media(max-width:767px) {
+    .counter .count-btn:last-of-type {
+        order: -1;
+    }
+    .counter .count-btn:first-of-type {
+        order: 3;
+    }
+}
+
+
+/*End Counter*/
+
+
+/*Start contact*/
+
+.contact {
+    padding-bottom: 30px;
+}
+
+.contact .holder {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 767px) {
+    .contact .holder {
+        flex-direction: column;
+    }
+    .contact .holder>div {
+        margin: 30px auto;
+    }
+}
+
+.contact .about {
+    width: 300px;
+    max-width: 100%;
+    margin-right: 100px;
+}
+
+.contact .about h2 {
+    color: #009899;
+    font-size: 23px;
+    margin-bottom: 20px
+}
+
+.contact .about p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact .links {
+    width: 300px;
+    max-width: 100%;
+}
+
+.contact .links .main-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact .links h2 {
+    color: #009899;
+    font-size: 23px;
+}
+
+.contact .links ul {
+    list-style: none;
+}
+
+.contact .links ul li {
+    display: inline-block;
+    padding-left: 20px
+}
+
+.contact .links ul li a {
+    color: #777;
+}
+
+.contact .links ul li a:hover {
+    color: #009899;
+}
+
+.contact .links p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact .links p span {
+    float: right;
+}
+
+.contact .copyright {
+    margin-top: 15px;
+    text-align: right;
+}
+
+
+/*End contact*/
